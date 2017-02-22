@@ -3,6 +3,8 @@
   hosts: localhost
   become: true
   become_user: root
+  vars_files:
+    - "vars/user.yml"
   roles:
     - users
     - python

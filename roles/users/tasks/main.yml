@@ -4,16 +4,17 @@
   git:
     repo: https://github.com/squidboylan/dotfiles.git
     clone: yes
-    dest: /home/squid
+    dest: "/home/{{ user_name }}"
     update: no
 
-- name: Create user
+- name: "Create user {{ user_name }}"
   user:
-    name: squid
+    name: "{{ user_name }}"
     shell: /bin/bash
 
 - name: Chown dotfiles
   file:
-    owner: squid
-    path: /home/squid
+    owner: "{{ user_name }}"
+    path: "/home/{{ user_name }}"
     recurse: yes
+    group: "{{ group_name }}"

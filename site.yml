@@ -1,0 +1,9 @@
+---
+- name: setup workstation
+  hosts: localhost
+  become: true
+  become_user: root
+  roles:
+    - users
+    - python
+    - i3

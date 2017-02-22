@@ -1,5 +1,19 @@
 ---
+
+- name: Download dotfiles
+  git:
+    repo: https://github.com/squidboylan/dotfiles.git
+    clone: yes
+    dest: /home/squid
+    update: no
+
 - name: Create user
   user:
     name: squid
     shell: /bin/bash
+
+- name: Chown dotfiles
+  file:
+    owner: squid
+    path: /home/squid
+    recurse: yes

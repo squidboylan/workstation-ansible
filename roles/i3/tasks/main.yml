@@ -1,0 +1,9 @@
+---
+- name: Install i3 and related packages
+  zypper:
+    name: "{{ item }}"
+  with_items:
+    - i3
+    - i3lock
+    - libiw-devel
+    - netifaces

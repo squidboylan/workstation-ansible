@@ -1,0 +1,20 @@
+---
+- name: refresh cache
+  zypper_repository:
+    runrefresh: yes
+    repo: '*'
+
+- name: Install python packages
+  zypper:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - gcc
+    - python2
+    - python3
+    - python2-devel
+    - python3-devel
+    - python-virtualenv
+    - python3-virtualenv
+    - python-pip
+    - python3-pip

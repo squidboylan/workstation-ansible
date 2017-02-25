@@ -1,0 +1,7 @@
+---
+- name: install general software
+  zypper:
+    name: "{{ item }}"
+  with_items:
+    - vlc
+    - vlc-codecs

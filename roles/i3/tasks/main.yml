@@ -6,4 +6,4 @@
     - i3
     - i3lock
     - libiw-devel
-    - netifaces
+    - python-netifaces

@@ -10,9 +10,9 @@
     state: present
   with_items:
     - gcc
-    - python2
+    - python
     - python3
-    - python2-devel
+    - python-devel
     - python3-devel
     - python-virtualenv
     - python3-virtualenv
